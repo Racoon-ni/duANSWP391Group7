@@ -20,5 +20,4 @@ public class PClist {
     public List<Product> getAllPCs(){
         return productDAO.getAllPCs();
     }
-           
 }
