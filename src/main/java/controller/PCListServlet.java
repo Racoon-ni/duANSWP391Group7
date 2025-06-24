@@ -8,7 +8,7 @@ package controller;
  *
  * @author ThinhLVCE181726 <your.name at your.org>
  */
-import dao.ProductDAO;
+import service.PClist;
 import model.Product;
 
 import jakarta.servlet.*;
@@ -19,12 +19,12 @@ import java.util.List;
 
 @WebServlet("/pc-list")
 public class PCListServlet extends HttpServlet {
-    private ProductDAO productDAO = new ProductDAO();
-
+    private PClist pcservice = new PClist();
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<Product> products = productDAO.getAllPCs();
+        List<Product> products = pcservice.getAllPCs();
         request.setAttribute("products", products);
         request.getRequestDispatcher("/WEB-INF/include/product-list.jsp").forward(request, response);
     }
