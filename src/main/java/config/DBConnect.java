@@ -25,7 +25,7 @@ public class DBConnect {
 
     /**
      * Phương thức static dùng để tạo và trả về kết nối (Connection) tới cơ sở
-     * dữ liệu.
+     * dữ liệu
      *
      * @return Connection - đối tượng kết nối tới SQL Server hoặc null nếu lỗi
      */
